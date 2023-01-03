@@ -1,11 +1,13 @@
-const countBs = string => {
-  let numberOfBs = 0
+const countBs = string => countChar(string, 'B')
+
+const countChar = (string, char) => {
+  let charOccurences = 0
 
   for (let i = 0; i < string.length; i++) {
-    if (string[i] === 'B') numberOfBs++
+    if (string[i] === char) charOccurences++
   }
 
-  return numberOfBs
+  return charOccurences
 }
 
 console.log(countBs('Bianca'))
